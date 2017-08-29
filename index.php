@@ -87,7 +87,7 @@
           <p class="subtitle">1v1 Matches</p>
         </div>
       </div>
-      <p class="info">FOOSBALL DATA (LESS-JANKY VERSION) - V1.1 - <a>GITHUB</a></p>
+      <p class="info">FOOSBALL DATA (LESS-JANKY VERSION) - V1.2 - <a target="_blank" href="https://github.com/bramkorsten/Foosball-Data">GITHUB</a></p>
     </div>
       <div id="player-wrap" class="player-wrap">
         <h2 class="title">Player Stats</h2>
@@ -109,6 +109,15 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="raw-data-option">
+        <input type="checkbox" id="showGames" name="set-name" class="switch-input checkbox">
+        <label for="showGames" class="switch-label switch-label-option"></label>
+        <p class="showGamesTitle">SHOW RAW GAMES</p>
+      </div>
+
+      <div id="game-feed" class="game-feed">
+
+      </div>
   </body>
 </html>

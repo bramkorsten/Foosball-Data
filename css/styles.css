@@ -115,6 +115,31 @@ p.subtitle {
   margin: 16px;
   padding: 16px 0 16px 44px;
 }
+
+.switch-label-option {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: left;
+  margin: 9px 9px 9px 20px;
+  padding: 16px 0 16px 44px;
+}
+
+.showGamesTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: #929292;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  float: right;
+  text-align: right;
+  padding: 19.5px 20px 19.5px 0;
+}
+
 .switch-label:before, .switch-label:after {
   content: "";
   position: absolute;
@@ -391,3 +416,120 @@ p.info {
   clear: both;
   text-align: right;
 }
+
+.info a {
+  color: #7790e4;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.game-feed {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+
+.game-feed.show {
+  display: block;
+}
+
+.raw-data-option {
+  width: 220px;
+  height: 50px;
+  background-color: #FAFAFA;
+  display: block;
+  -webkit-box-shadow: 0px 9px 20px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 9px 20px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 9px 20px 0px rgba(0,0,0,0.3);
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 110px);
+}
+
+.game-wrap {
+  width: 80%;
+  height: 300px;
+  background-color: #FAFAFA;
+  display: block;
+  float: left;
+  margin: 20px 10% 20px;
+  -webkit-box-shadow: 0px 29px 92px -38px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 29px 92px -38px rgba(0,0,0,0.75);
+  box-shadow: 0px 29px 92px -38px rgba(0,0,0,0.75);
+  overflow: hidden;
+}
+
+.game-wrap .match-info {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: #929292;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.game-wrap .opponents {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #929292;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  clear: both;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.game-wrap .opponents .vs {
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+
+.slash {
+  padding: 0 15px;
+}
+
+.game-wrap .opponents .redTeam, .game-wrap .score .redTeamScore, .game-wrap .klinkers .redTeamKlinkers {
+  color: #f55656;
+}
+
+.game-wrap .opponents .blueTeam, .game-wrap .score .blueTeamScore, .game-wrap .klinkers .blueTeamKlinkers {
+  color: #7790e4;
+}
+
+.game-wrap .score {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5em;
+  font-weight: 700;
+  margin: 0;
+  color: #444;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.game-wrap .klinkers {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 20px 0 0;
+  margin: 0;
+  color: #444;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); */

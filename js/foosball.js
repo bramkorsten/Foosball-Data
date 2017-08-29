@@ -90,7 +90,7 @@ teammatches.once('value').then(function(snapshot) {
     var matchData = childSnapshot.val();
     //var matchname1 = matchData['gameData']['blueTeam']['member1'];
     var matchKey = childSnapshot.key;
-    newGame(matchData['gameData']);
+    newGame(matchData['gameData'], matchKey);
     //pushBookmark(bookmarkName, bookmarkValue, bookmarkKey);
   });
 
@@ -108,8 +108,13 @@ teammatches.once('value').then(function(snapshot) {
   $('#main-loader').fadeOut();
 });
 
-function newGame(gameData) {
+function newGame(gameData, key) {
   countIfPlayed(gameData);
+  pushGame(gameData, key);
+}
+
+function pushGame(gameData, key) {
+  $("#game-feed").append('<div class="game-wrap" id="'+ key +'"><p class="match-info">Match played on: '+ gameData['date'] +'</p><p class="opponents"><span class="redTeam">'+ gameData['redTeam']['member1'] +' and '+ gameData['redTeam']['member2'] +'</span><span class=" vs ">VS</span><span class="blueTeam">'+ gameData['blueTeam']['member1'] +' and '+ gameData['blueTeam']['member2'] +'</span></p><p class="score"><span class="redTeamScore">'+ gameData['redTeam']['score'] + '</span><span class="slash">/</span><span class="blueTeamScore">'+ gameData['blueTeam']['score'] +'</span></p><p class="match-info">KLINKERS</p><p class="klinkers"><span class="redTeamKlinkers">'+ gameData['redTeam']['klinkers'] +'</span><span class="slash">/</span><span class="blueTeamKlinkers">'+ gameData['blueTeam']['klinkers'] +'</span></p></div>')
 }
 
 function countStats() {
@@ -366,5 +371,14 @@ $(function(){
           $('#matchdatatype').text("MATCHES PLAYED");
       }
       countStats();
+  });
+
+  $('#showGames').change(function(event) {
+      var checkbox = event.target;
+      if (checkbox.checked) {
+          $('#game-feed').fadeIn();
+      } else {
+          $('#game-feed').fadeOut();
+      }
   });
 });
